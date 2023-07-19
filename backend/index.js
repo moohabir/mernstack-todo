@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 require('dotenv').config();
 
-mongoose.connect(
-  'mongodb+srv://moohabir:Moohabir25@mycluster1.43hzzre.mongodb.net/merndatabase'
-);
+mongoose.connect(process.env.mongodb_url);
 
 app.use(express.json());
 app.use(cors());
